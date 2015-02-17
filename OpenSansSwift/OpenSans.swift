@@ -10,15 +10,15 @@ import UIKit
 
 protocol UIFontOpenSans {
     
-    func openSansFontOfSize(size: CGFloat) -> UIFont!
+     func openSansFontOfSize(size: CGFloat) -> UIFont!
     
 }
 
 extension UIFont : UIFontOpenSans {
     
-    func openSansFontOfSize(size: CGFloat) -> UIFont! {
-        let font = UIFont(name: "OpenSans-Regular", size: size)
-        return font
+    public func openSansFontOfSize(size: CGFloat) -> UIFont! {
+        return UIFont(name: "OpenSans-Regular", size: size)
     }
    
 }
+
