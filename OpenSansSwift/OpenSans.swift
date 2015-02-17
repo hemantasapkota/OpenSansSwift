@@ -32,7 +32,7 @@ protocol UIFontOpenSans {
 
 extension UIFont : UIFontOpenSans {
     
-    class func openSansFontOfSize(size: Float) -> UIFont! {
+    public class func openSansFontOfSize(size: Float) -> UIFont! {
         return UIFont(name: "OpenSans-Regular", size: CGFloat(size))
     }
 }
