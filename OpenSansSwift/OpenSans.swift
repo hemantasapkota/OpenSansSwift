@@ -10,15 +10,29 @@ import UIKit
 
 protocol UIFontOpenSans {
     
-     func openSansFontOfSize(size: CGFloat) -> UIFont!
+    class func openSansFontOfSize(size: Float) -> UIFont!
+    
+//    func openSansBoldFontOfSize(size: CGFloat) -> UIFont!
+//    
+//    func openSansExtraBoldFontOfSize(size: CGFloat) -> UIFont!
+//    
+//    func openSansExtraBoldItalicFontOfSize(size: CGFloat) -> UIFont!
+//    
+//    func openSansItalicFontOfSize(size: CGFloat) -> UIFont!
+//    
+//    func openSansLightFontOfSize(size: CGFloat) -> UIFont!
+//    
+//    func openSansLightItalicFontOfSize(size: CGFloat) -> UIFont!
+//    
+//    func openSansSemiboldFontOfSize(size: CGFloat) -> UIFont!
+//    
+//    func openSansSemiboldItalicFontOfSize(size: CGFloat) -> UIFont!
     
 }
 
 extension UIFont : UIFontOpenSans {
     
-    public func openSansFontOfSize(size: CGFloat) -> UIFont! {
-        return UIFont(name: "OpenSans-Regular", size: size)
+    class func openSansFontOfSize(size: Float) -> UIFont! {
+        return UIFont(name: "OpenSans-Regular", size: CGFloat(size))
     }
-   
 }
-
