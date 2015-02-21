@@ -22,6 +22,9 @@
 		2EC889481A9314B7002E513D /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2EC8893D1A9314B6002E513D /* OpenSans-Regular.ttf */; };
 		2EC889491A9314B7002E513D /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2EC8893E1A9314B7002E513D /* OpenSans-Semibold.ttf */; };
 		2EC8894A1A9314B7002E513D /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2EC8893F1A9314B7002E513D /* OpenSans-SemiboldItalic.ttf */; };
+		2EC8894D1A932B07002E513D /* OpenSans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC889301A93136B002E513D /* OpenSans.swift */; };
+		2EC8894F1A932CAD002E513D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC8894E1A932CAD002E513D /* CoreText.framework */; };
+		2EC889521A9330C0002E513D /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2EC8893D1A9314B6002E513D /* OpenSans-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,7 @@
 		2EC8893D1A9314B6002E513D /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		2EC8893E1A9314B7002E513D /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		2EC8893F1A9314B7002E513D /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		2EC8894E1A932CAD002E513D /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EC8894F1A932CAD002E513D /* CoreText.framework in Frameworks */,
 				2EC889201A931302002E513D /* OpenSansSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,6 +82,7 @@
 		2EC8890A1A931302002E513D = {
 			isa = PBXGroup;
 			children = (
+				2EC8894E1A932CAD002E513D /* CoreText.framework */,
 				2EC889161A931302002E513D /* OpenSansSwift */,
 				2EC889231A931302002E513D /* OpenSansSwiftTests */,
 				2EC889151A931302002E513D /* Products */,
@@ -254,6 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EC889521A9330C0002E513D /* OpenSans-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EC8894D1A932B07002E513D /* OpenSans.swift in Sources */,
 				2EC889271A931302002E513D /* OpenSansSwiftTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
