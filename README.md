@@ -5,6 +5,19 @@ Easily use the OpenSans font in Swift
 
 ![Screenshot](OpenSans-SS.png)
 
+## Why use OpenSansSwift frameworks ? ##
+
+The usual process of embedding any custom fonts in your IOS applications has a few steps:
+
+1. Copy all your font resources to your project
+2. Make sure they're copied to the bundle
+3. Add UIAppFonts key to info.plist.
+4. Painstakingly add all the font names with the right extension
+5. Find out the font family and font names programatically
+6. Use the fonts
+
+For the OpenSans font, this framework does all that for you. All you have to do is link the compiled framework.
+
 ## How to Install - Carthage ##
 
 If you dont' already have Carthage, Install it with:
