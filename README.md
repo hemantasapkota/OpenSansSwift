@@ -31,6 +31,10 @@ Add ```github "hemantasapkota/OpenSansSwift"``` to your Cartfile.
 
 Execute ```carthage install```
 
+## How to Install - Manual ##
+
+Clone the repo and add ```OpenSansSwift.xcodeproj``` to you project. Link ```OpenSansSwift.framework``` to your project.
+
 ## OpenSans Font Methods ##
 
 Based on *OpenSans v2.0*, *OpenSansSwift* registers the following methods:
