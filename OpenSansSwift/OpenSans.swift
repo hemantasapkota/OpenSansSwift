@@ -11,25 +11,25 @@ import CoreText
 
 protocol UIFontOpenSans {
     
-    class func openSansFontOfSize(size: Float) -> UIFont!
+    static func openSansFontOfSize(size: Float) -> UIFont!
     
-    class func openSansBoldFontOfSize(size: Float) -> UIFont!
+    static func openSansBoldFontOfSize(size: Float) -> UIFont!
     
-    class func openSansBoldItalicFontOfSize(size: Float) -> UIFont!
+    static func openSansBoldItalicFontOfSize(size: Float) -> UIFont!
     
-    class func openSansExtraBoldFontOfSize(size: Float) -> UIFont!
+    static func openSansExtraBoldFontOfSize(size: Float) -> UIFont!
     
-    class func openSansExtraBoldItalicFontOfSize(size: Float) -> UIFont!
+    static func openSansExtraBoldItalicFontOfSize(size: Float) -> UIFont!
     
-    class func openSansItalicFontOfSize(size: Float) -> UIFont!
+    static func openSansItalicFontOfSize(size: Float) -> UIFont!
     
-    class func openSansLightFontOfSize(size: Float) -> UIFont!
+    static func openSansLightFontOfSize(size: Float) -> UIFont!
     
-    class func openSansLightItalicFontOfSize(size: Float) -> UIFont!
+    static func openSansLightItalicFontOfSize(size: Float) -> UIFont!
     
-    class func openSansSemiboldFontOfSize(size: Float) -> UIFont!
+    static func openSansSemiboldFontOfSize(size: Float) -> UIFont!
     
-    class func openSansSemiboldItalicFontOfSize(size: Float) -> UIFont!
+    static func openSansSemiboldItalicFontOfSize(size: Float) -> UIFont!
     
 }
 
