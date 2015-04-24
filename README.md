@@ -1,7 +1,7 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 ## OpenSansSwift ##
-Easily use the OpenSans font in Swift
+Easily use the OpenSans font in Swift. For Swift 1.2, checkout branch ```swift-1.2```.
 
 ![Screenshot](OpenSans-SS.png)
 
