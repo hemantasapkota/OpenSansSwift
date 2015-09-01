@@ -75,9 +75,9 @@ extension UIFont : UIFontOpenSans {
         return UIFont(name: "OpenSans-SemiboldItalic", size: makeSize(size))
     }
 
-    public class func makeSize(size: Float) -> CGFloat {
+    class func makeSize(size: Float) -> CGFloat {
         if UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Pad {
-            CGFloat(size * OpenSans.retinaScaleFactor)
+            return CGFloat(size * OpenSans.retinaScaleFactor)
         }
 
         return CGFloat(size)
