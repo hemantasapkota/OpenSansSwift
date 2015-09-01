@@ -35,9 +35,6 @@ protocol UIFontOpenSans {
 
 extension UIFont : UIFontOpenSans {
 
-    /// scale factor for retina devices. Default 2.0
-    public static var retinaScaleFactor: Float = 2.0
-    
     public class func openSansFontOfSize(size: Float) -> UIFont! {
         return UIFont(name: "OpenSans", size: makeSize(size))
     }
@@ -78,9 +75,9 @@ extension UIFont : UIFontOpenSans {
         return UIFont(name: "OpenSans-SemiboldItalic", size: makeSize(size))
     }
 
-    private class func makeSize(size: Float) -> CGFloat {
+    public class func makeSize(size: Float) -> CGFloat {
         if UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Pad {
-            CGFloat(size * retinaScaleFactor)
+            CGFloat(size * OpenSans.retinaScaleFactor)
         }
 
         return CGFloat(size)
@@ -89,6 +86,10 @@ extension UIFont : UIFontOpenSans {
 }
 
 public class OpenSans {
+
+    /// scale factor for retina devices. Default 2.0
+    public static var retinaScaleFactor: Float = 2.0
+
     public class func registerFonts() -> Bool {
         let fontNames = [
             "OpenSans-Regular",
