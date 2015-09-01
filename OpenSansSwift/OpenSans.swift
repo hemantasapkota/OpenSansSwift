@@ -10,7 +10,7 @@ import UIKit
 import CoreText
 
 protocol UIFontOpenSans {
-    
+
     static func openSansFontOfSize(size: Float) -> UIFont!
     
     static func openSansBoldFontOfSize(size: Float) -> UIFont!
@@ -34,45 +34,56 @@ protocol UIFontOpenSans {
 }
 
 extension UIFont : UIFontOpenSans {
+
+    /// scale factor for retina devices. Default 2.0
+    public static var retinaScaleFactor: Float = 2.0
     
     public class func openSansFontOfSize(size: Float) -> UIFont! {
-        return UIFont(name: "OpenSans", size: CGFloat(size))
+        return UIFont(name: "OpenSans", size: makeSize(size))
     }
     
     public class func openSansBoldFontOfSize(size: Float) -> UIFont! {
-        return UIFont(name: "OpenSans-Bold", size: CGFloat(size))
+        return UIFont(name: "OpenSans-Bold", size: makeSize(size))
     }
     
     public class func openSansBoldItalicFontOfSize(size: Float) -> UIFont! {
-        return UIFont(name: "OpenSans-BoldItalic", size: CGFloat(size))
+        return UIFont(name: "OpenSans-BoldItalic", size: makeSize(size))
     }
     
     public class func openSansExtraBoldFontOfSize(size: Float) -> UIFont! {
-        return UIFont(name: "OpenSans-Extrabold", size: CGFloat(size))
+        return UIFont(name: "OpenSans-Extrabold", size: makeSize(size))
     }
     
     public class func openSansExtraBoldItalicFontOfSize(size: Float) -> UIFont! {
-        return UIFont(name: "OpenSans-ExtraboldItalic", size: CGFloat(size))
+        return UIFont(name: "OpenSans-ExtraboldItalic", size: makeSize(size))
     }
     
     public class func openSansItalicFontOfSize(size: Float) -> UIFont! {
-        return UIFont(name: "OpenSans-Italic", size: CGFloat(size))
+        return UIFont(name: "OpenSans-Italic", size: makeSize(size))
     }
     
     public class func openSansLightFontOfSize(size: Float) -> UIFont! {
-        return UIFont(name: "OpenSans-Light", size: CGFloat(size))
+        return UIFont(name: "OpenSans-Light", size: makeSize(size))
     }
     
     public class func openSansLightItalicFontOfSize(size: Float) -> UIFont! {
-        return UIFont(name: "OpenSansLight-Italic", size: CGFloat(size))
+        return UIFont(name: "OpenSansLight-Italic", size: makeSize(size))
     }
     
     public class func openSansSemiboldFontOfSize(size: Float) -> UIFont! {
-        return UIFont(name: "OpenSans-Semibold", size: CGFloat(size))
+        return UIFont(name: "OpenSans-Semibold", size: makeSize(size))
     }
     
     public class func openSansSemiboldItalicFontOfSize(size: Float) -> UIFont! {
-        return UIFont(name: "OpenSans-SemiboldItalic", size: CGFloat(size))
+        return UIFont(name: "OpenSans-SemiboldItalic", size: makeSize(size))
+    }
+
+    private class func makeSize(size: Float) -> CGFloat {
+        if UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Pad {
+            CGFloat(size * retinaScaleFactor)
+        }
+
+        return CGFloat(size)
     }
     
 }
