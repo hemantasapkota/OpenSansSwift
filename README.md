@@ -52,6 +52,9 @@ Based on *OpenSans v2.0*, *OpenSansSwift* registers the following methods:
     openSansSemiboldItalicFontOfSize(size: Float) -> UIFont!
 ```
 
+## Retina Scale Factor ##
+Set ```OpenSans.retinaScaleFactor``` to automatically scale out font size for iPad. Default is 2.
+
 ## Usage - Programmatically ##
 
 See Example for more details.
@@ -67,6 +70,9 @@ class ViewController: UIViewController {
         
         //Register Open Sans fonts. Register only once.
         OpenSans.registerFonts()
+        
+        // Set the scale for iPad. Default is 2.
+        OpenSans.retinaScaleFactor = 1.5
         
         // Create a label
         let lbl1 = UILabel(frame: CGRectMake(x, y, size.width, size.height))
