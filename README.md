@@ -53,7 +53,7 @@ Based on *OpenSans v2.0*, *OpenSansSwift* registers the following methods:
 ```
 
 ## Retina Scale Factor ##
-Set ```OpenSans.retinaScaleFactor``` to automatically scale out font size for iPad. Default is 2.
+Set ```OpenSans.retinaScaleFactor``` to scale out font sizes for the iPad. Default is 2.
 
 ## Usage - Programmatically ##
 
