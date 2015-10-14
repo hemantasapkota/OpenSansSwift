@@ -217,6 +217,7 @@
 		2EC8890B1A931302002E513D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Open Learning Pty Ltd";
 				TargetAttributes = {

@@ -109,7 +109,7 @@ public class OpenSans {
         for font in fontNames {
             let url = NSBundle(forClass: OpenSans.self).URLForResource(font, withExtension: "ttf")
             if (url != nil) {
-                CTFontManagerRegisterFontsForURL(url, CTFontManagerScope.None, &error)
+                CTFontManagerRegisterFontsForURL(url!, CTFontManagerScope.None, &error)
             }
         }
         
