@@ -11,72 +11,72 @@ import CoreText
 
 protocol UIFontOpenSans {
 
-    static func openSansFontOfSize(size: Float) -> UIFont!
+    static func openSansFontOfSize(_ size: Float) -> UIFont!
     
-    static func openSansBoldFontOfSize(size: Float) -> UIFont!
+    static func openSansBoldFontOfSize(_ size: Float) -> UIFont!
     
-    static func openSansBoldItalicFontOfSize(size: Float) -> UIFont!
+    static func openSansBoldItalicFontOfSize(_ size: Float) -> UIFont!
     
-    static func openSansExtraBoldFontOfSize(size: Float) -> UIFont!
+    static func openSansExtraBoldFontOfSize(_ size: Float) -> UIFont!
     
-    static func openSansExtraBoldItalicFontOfSize(size: Float) -> UIFont!
+    static func openSansExtraBoldItalicFontOfSize(_ size: Float) -> UIFont!
     
-    static func openSansItalicFontOfSize(size: Float) -> UIFont!
+    static func openSansItalicFontOfSize(_ size: Float) -> UIFont!
     
-    static func openSansLightFontOfSize(size: Float) -> UIFont!
+    static func openSansLightFontOfSize(_ size: Float) -> UIFont!
     
-    static func openSansLightItalicFontOfSize(size: Float) -> UIFont!
+    static func openSansLightItalicFontOfSize(_ size: Float) -> UIFont!
     
-    static func openSansSemiboldFontOfSize(size: Float) -> UIFont!
+    static func openSansSemiboldFontOfSize(_ size: Float) -> UIFont!
     
-    static func openSansSemiboldItalicFontOfSize(size: Float) -> UIFont!
+    static func openSansSemiboldItalicFontOfSize(_ size: Float) -> UIFont!
     
 }
 
 extension UIFont : UIFontOpenSans {
 
-    public class func openSansFontOfSize(size: Float) -> UIFont! {
+    public class func openSansFontOfSize(_ size: Float) -> UIFont! {
         return UIFont(name: "OpenSans", size: makeSize(size))
     }
     
-    public class func openSansBoldFontOfSize(size: Float) -> UIFont! {
+    public class func openSansBoldFontOfSize(_ size: Float) -> UIFont! {
         return UIFont(name: "OpenSans-Bold", size: makeSize(size))
     }
     
-    public class func openSansBoldItalicFontOfSize(size: Float) -> UIFont! {
+    public class func openSansBoldItalicFontOfSize(_ size: Float) -> UIFont! {
         return UIFont(name: "OpenSans-BoldItalic", size: makeSize(size))
     }
     
-    public class func openSansExtraBoldFontOfSize(size: Float) -> UIFont! {
+    public class func openSansExtraBoldFontOfSize(_ size: Float) -> UIFont! {
         return UIFont(name: "OpenSans-Extrabold", size: makeSize(size))
     }
     
-    public class func openSansExtraBoldItalicFontOfSize(size: Float) -> UIFont! {
+    public class func openSansExtraBoldItalicFontOfSize(_ size: Float) -> UIFont! {
         return UIFont(name: "OpenSans-ExtraboldItalic", size: makeSize(size))
     }
     
-    public class func openSansItalicFontOfSize(size: Float) -> UIFont! {
+    public class func openSansItalicFontOfSize(_ size: Float) -> UIFont! {
         return UIFont(name: "OpenSans-Italic", size: makeSize(size))
     }
     
-    public class func openSansLightFontOfSize(size: Float) -> UIFont! {
+    public class func openSansLightFontOfSize(_ size: Float) -> UIFont! {
         return UIFont(name: "OpenSans-Light", size: makeSize(size))
     }
     
-    public class func openSansLightItalicFontOfSize(size: Float) -> UIFont! {
+    public class func openSansLightItalicFontOfSize(_ size: Float) -> UIFont! {
         return UIFont(name: "OpenSansLight-Italic", size: makeSize(size))
     }
     
-    public class func openSansSemiboldFontOfSize(size: Float) -> UIFont! {
+    public class func openSansSemiboldFontOfSize(_ size: Float) -> UIFont! {
         return UIFont(name: "OpenSans-Semibold", size: makeSize(size))
     }
     
-    public class func openSansSemiboldItalicFontOfSize(size: Float) -> UIFont! {
+    public class func openSansSemiboldItalicFontOfSize(_ size: Float) -> UIFont! {
         return UIFont(name: "OpenSans-SemiboldItalic", size: makeSize(size))
     }
 
-    class func makeSize(size: Float) -> CGFloat {
-        if UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Pad {
+    class func makeSize(_ size: Float) -> CGFloat {
+        if UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad {
             return CGFloat(size * OpenSans.retinaScaleFactor)
         }
 
@@ -85,12 +85,12 @@ extension UIFont : UIFontOpenSans {
     
 }
 
-public class OpenSans {
+open class OpenSans {
 
     /// scale factor for retina devices. Default 2.0
-    public static var retinaScaleFactor: Float = 2.0
+    open static var retinaScaleFactor: Float = 2.0
 
-    public class func registerFonts() -> Bool {
+    open class func registerFonts() -> Bool {
         let fontNames = [
             "OpenSans-Regular",
             "OpenSans-Bold",
@@ -107,9 +107,9 @@ public class OpenSans {
         var error: Unmanaged<CFError>? = nil
         
         for font in fontNames {
-            let url = NSBundle(forClass: OpenSans.self).URLForResource(font, withExtension: "ttf")
+            let url = Bundle(for: OpenSans.self).url(forResource: font, withExtension: "ttf")
             if (url != nil) {
-                CTFontManagerRegisterFontsForURL(url!, CTFontManagerScope.None, &error)
+                CTFontManagerRegisterFontsForURL(url! as CFURL, CTFontManagerScope.none, &error)
             }
         }
         
