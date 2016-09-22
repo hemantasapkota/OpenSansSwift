@@ -1,7 +1,7 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 ## OpenSansSwift ##
-Easily use the OpenSans font in Swift 1.2.
+Easily use the OpenSans font in Swift.
 
 ![Screenshot](OpenSans-SS.png)
 
@@ -28,6 +28,12 @@ $ brew install carthage
 ```
 
 Add ```github "hemantasapkota/OpenSansSwift"``` to your Cartfile.
+
+Execute ```carthage install```
+
+## Swift 3 ##
+
+Add ```github "hemantasapkota/OpenSansSwift" "swift3"``` to your Cartfile.
 
 Execute ```carthage install```
 
