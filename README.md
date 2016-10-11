@@ -97,6 +97,16 @@ XCode automatically detects the fonts present in the bundle, so you don't have t
 
 ![Screenshot](OpenSans-StoryBoard.png)
 
+## Usage - With NSAttributedString ##
+
+For use with NSAttributedString, Use the following strings: OpenSans, OpenSans-Bold, OpenSans-Italic
+
+```
+let regularAttribute = [NSFontAttributeName: UIFont(name: "OpenSans", size: 12)!]
+let boldAttribute = [NSFontAttributeName: UIFont(name: "OpenSans-Bold", size: 12)!]
+let italicAttribute = [NSFontAttributeName: UIFont(name: "OpenSans-Italic", size: 12)!]
+```
+
 ## Licence ##
 
 * MIT for OpenSansSwift framework.
